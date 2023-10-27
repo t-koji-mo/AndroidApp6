@@ -1,0 +1,11 @@
+<resources>
+    <string name="app_name">AndroidApp6</string>
+    <string name="jan_name">JANコード</string>
+    <string name="jan_hint">4900000000001</string>
+    <string name="item_name">商品名</string>
+    <string name="price_name">単価</string>
+    <string name="button_name">登録</string>
+    <string name="button_ins_name">登録</string>
+    <string name="button_upd_name">更新</string>
+    <string name="button_del_name">削除</string>
+</resources>

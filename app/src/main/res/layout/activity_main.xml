@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <TextView
+        android:id="@+id/lblJan"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="16dp"
+        android:text="@string/jan_name"
+        android:textSize="20sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <EditText
+        android:id="@+id/janCode"
+        android:imeOptions="actionDone"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:hint="@string/jan_hint"
+        android:inputType="number"
+        android:textSize="24sp"
+        app:layout_constraintStart_toStartOf="@+id/lblJan"
+        app:layout_constraintTop_toBottomOf="@+id/lblJan" />
+
+    <TextView
+        android:id="@+id/lblItemName"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:text="@string/item_name"
+        android:textSize="20sp"
+        android:labelFor="@+id/itemName"
+        app:layout_constraintStart_toStartOf="@+id/janCode"
+        app:layout_constraintTop_toBottomOf="@+id/janCode" />
+
+    <EditText
+        android:id="@+id/itemName"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:ems="14"
+        android:inputType="text"
+        android:textSize="22sp"
+        app:layout_constraintStart_toStartOf="@+id/lblItemName"
+        app:layout_constraintTop_toBottomOf="@+id/lblItemName" />
+
+    <TextView
+        android:id="@+id/lblPrice"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:text="@string/price_name"
+        android:textSize="20sp"
+        android:labelFor="@+id/price"
+        app:layout_constraintStart_toStartOf="@+id/itemName"
+        app:layout_constraintTop_toBottomOf="@+id/itemName" />
+
+    <EditText
+        android:id="@+id/price"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:ems="5"
+        android:inputType="number"
+        android:textSize="22sp"
+        app:layout_constraintStart_toStartOf="@+id/lblPrice"
+        app:layout_constraintTop_toBottomOf="@+id/lblPrice" />
+
+    <Button
+        android:id="@+id/button"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="32dp"
+        android:layout_marginTop="32dp"
+        android:layout_marginEnd="32dp"
+        android:text="@string/button_name"
+        android:backgroundTint="@color/blue"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/price" />
+
+    <Switch
+        android:id="@+id/switchDelete"
+        android:visibility="invisible"
+        android:layout_width="96dp"
+        android:layout_height="48dp"
+        android:layout_marginTop="32dp"
+        android:text="Delete"
+        app:layout_constraintStart_toStartOf="@+id/button"
+        app:layout_constraintTop_toBottomOf="@+id/button"
+        tools:ignore="UseSwitchCompatOrMaterialXml" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
