@@ -26,6 +26,7 @@ class MainActivity : AppCompatActivity() {
     private lateinit var price: EditText
     private lateinit var button: Button
     private lateinit var switchDelete: Switch
+    private lateinit var buttonInit: Button
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -81,6 +82,12 @@ class MainActivity : AppCompatActivity() {
                 button.setText(R.string.button_upd_name)
                 button.setBackgroundColor(Color.rgb(0, 128,0))
             }
+        }
+
+        buttonInit = findViewById(R.id.buttonInit)
+        buttonInit.setOnClickListener {
+            clearEditText()
+            setFocus("janCode")
         }
 
     }
