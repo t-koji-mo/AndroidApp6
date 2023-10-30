@@ -70,10 +70,9 @@ class MainActivity : AppCompatActivity() {
 
         //val switchDelete = findViewById<Switch>(R.id.switchDelete)
         switchDelete = findViewById(R.id.switchDelete)
-        switchDelete.setOnCheckedChangeListener { buttonView, isChecked ->
+        switchDelete.setOnCheckedChangeListener { _, isChecked ->
             //Toast.makeText(this, isChecked.toString(), Toast.LENGTH_SHORT).show()
             if (isChecked) {
-                //button.setText("削除")
                 button.setText(R.string.button_del_name)
                 //button.text = "削除"
                 button.setBackgroundColor(Color.RED)
@@ -204,7 +203,8 @@ class MainActivity : AppCompatActivity() {
             val dbHelper = SampleDBHelper(applicationContext, dbName, null, dbVersion)
             val database = dbHelper.readableDatabase
 
-            val sql = "select ItemName,Price from " + tableName + " where JanCode = ?"
+            //val sql = "select ItemName,Price from " + tableName + " where JanCode = ?"
+            val sql = "select ItemName,Price from $tableName where JanCode = ?"
 
             val cursor = database.rawQuery(sql, arrayOf(janCode.text.toString()))
             if (cursor.count > 0) {
